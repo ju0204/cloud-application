@@ -1,0 +1,10 @@
+resources:
+  - ../../base
+
+namespace: prod
+namePrefix: prod-
+
+configMapGenerator:
+  - name: db-env
+    envs:
+      - prod.env
