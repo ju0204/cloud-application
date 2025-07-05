@@ -4,8 +4,9 @@ metadata:
   name: argocd-service
 spec:
   selector:
-    app.kubernetes.io/name: argocd-web-img
+    app.kubernetes.io/name: step03_app_test
   type: ClusterIP
   ports:
     - protocol: TCP
       port: 80
+      targetPort: 8084

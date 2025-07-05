@@ -7,12 +7,15 @@ spec:
   replicas: 1
   selector:
     matchLabels:
-      app.kubernetes.io/name: argocd-web-img
+      app.kubernetes.io/name: step03_app_test
   template:
     metadata:
       labels:
-        app.kubernetes.io/name: argocd-web-img
+        app.kubernetes.io/name: step03_app_test
     spec:
       containers:
       - name: argode-img-container
-        image: juhee24/app-with-argocd-img:c033737
+        image: juhee24/cloud-application:c033737
+        envFrom:
+        - configMapRef:
+            name: prod-env-vars

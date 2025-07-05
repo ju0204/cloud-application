@@ -1,11 +1,6 @@
 resources:
 - ../../base
 
-images:
-  - name: nginx
-    newName: nginx
-    newTag: latest
-
 # patchesStrategicMerge
 
 patches:
