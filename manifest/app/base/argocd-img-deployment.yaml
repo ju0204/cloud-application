@@ -15,7 +15,7 @@ spec:
     spec:
       containers:
       - name: argode-img-container
-        image: juhee24/cloud-application:c033737
+        image: juhee24/cloud-application:b84e31d
         envFrom:
         - configMapRef:
             name: prod-env-vars
