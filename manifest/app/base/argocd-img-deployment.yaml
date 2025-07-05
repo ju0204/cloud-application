@@ -1,28 +1,18 @@
+# argocd-deployment.yaml
 apiVersion: apps/v1
 kind: Deployment
 metadata:
-  name: nginx
+  name: argocd-img-deployment
 spec:
   replicas: 1
   selector:
     matchLabels:
-      app: nginx
+      app.kubernetes.io/name: argocd-web-img
   template:
     metadata:
       labels:
-        app: nginx
-    spec: 
+        app.kubernetes.io/name: argocd-web-img
+    spec:
       containers:
-        - name: nginx
-          image: nginx
-          resources:
-            limits:
-              memory: "64Mi"
-              cpu: "100m"
-          volumeMounts:
-            - name: config-volume
-              mountPath: /etc/config
-      volumes:
-        - name: config-volume
-          configMap:
-            name: env-vars
+      - name: argode-img-container
+        image: juhee24/app-with-argocd-img:c033737
