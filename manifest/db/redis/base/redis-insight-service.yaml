@@ -5,10 +5,9 @@ metadata:
   labels:
     app: redis-insight
 spec:
-  type: NodePort
+  type: ClusterIP
   selector:
     app: redis-insight
   ports:
     - port: 5540
       targetPort: 5540
-      nodePort: 30540
