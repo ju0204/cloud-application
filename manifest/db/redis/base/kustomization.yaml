@@ -2,3 +2,5 @@ resources:
   - deployment.yaml
   - service.yaml
   - redis-configmap.yaml
+  - redis-insight-deployment.yaml
+  - redis-insight-service.yaml
