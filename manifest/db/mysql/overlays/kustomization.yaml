@@ -8,3 +8,6 @@ configMapGenerator:
   - name: db-env
     envs:
       - prod.env
+  - name: mysql-init-script
+    files:
+      - init.sql
