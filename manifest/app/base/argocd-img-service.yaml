@@ -5,8 +5,9 @@ metadata:
 spec:
   selector:
     app.kubernetes.io/name: step03_app_test
-  type: ClusterIP
+  type: NodePort
   ports:
     - protocol: TCP
       port: 80
       targetPort: 8084
+      nodeport: 33333
